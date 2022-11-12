@@ -1,38 +1,66 @@
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Objects;
+
 
 public class algor {
 
-    public String Name() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter his full name and gender: ");
-        String full_name = scanner.nextLine();
-        return full_name;
-
-    }
-    public String Gender(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter his gender: ");
-        String gen = scanner.nextLine();
-        return gen;
-    }
-    public Integer Age(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter his age: ");
-        Integer his_age = scanner.nextInt();
-        return his_age;
-    }
-
     public void File_writer(String name, String gend, Integer age) {
-        try (FileWriter writer = new FileWriter("Persons.txt")){
-            writer.write(name + " | " + gend + " | " + age);
+        try (FileWriter writer = new FileWriter("Persons.txt", true)) {
+            writer.write(name + " " + gend + " " + age + ", ");
 
             writer.flush();
-        }
-        catch (IOException ex){
+        } catch (IOException ex) {
             System.out.println("Something error");
         }
     }
+
+    public String Takeinfo() {
+        try (FileReader reader = new FileReader("Persons.txt")) {
+            int intValueOfChar;
+            String ordinaryString = "";
+            while ((intValueOfChar = reader.read()) != -1) {
+                ordinaryString += (char) intValueOfChar;
+            }
+            return ordinaryString;
+
+        } catch (IOException ex) {
+            return "Error";
+        }
+    }
+
+    public ArrayList<Integer> sortingToLists(String this_sorting) {
+        // three categories
+        ArrayList<Integer> age = new ArrayList<>();
+        ArrayList<String> names = new ArrayList<>();
+        ArrayList<String> gander = new ArrayList<>();
+
+
+        String[] new_str = this_sorting.split(" ");
+        var nothing = "";
+        var new_str2 = "";
+
+        for (int i = 0; i < new_str.length; i++) {
+            nothing += new_str[i];
+            for (int j = 0; j < 1; j++) {
+                String[] ab = nothing.split("_");
+                int b = Integer.decode(ab[2]);
+                age.add(b);
+                names.add(ab[0]);
+                nothing = "";
+            }
+
+        }
+        return age;
+    }
+
+
 }
+
+
+
+
+
