@@ -39,7 +39,7 @@ public class Main {
                     System.out.println("Hyvä, kiitos paljon kaikkista =) ");
                 } else if (num == 2) {
                     if(hashMap.size() == 0) {
-                        System.out.println("HashMap is empty");
+                        System.out.println("HashMap on tyhjä");
                     } else {
                         for (int i = 0; i < hashMap.size(); i++) {
                             System.out.println(hashMap.get(i));
