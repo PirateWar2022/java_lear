@@ -1,10 +1,13 @@
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
 
+        int start = (int) System.currentTimeMillis();
+
         HashMap<Integer, String> hashMap = new HashMap<>();
+        TreeMap<Integer, String> treeMap = new TreeMap<>();
+        LinkedHashMap<Integer, String> linkedHashMap = new LinkedHashMap<>();
 
         // Create scanners
         Scanner scanner = new Scanner(System.in);
@@ -34,12 +37,26 @@ public class Main {
 
                     People people = new People(fName, lName, age);
                     int lastItem = hashMap.size();
+
+                    // Lisää HashMapiin
                     hashMap.put(lastItem, people.getAll());
+                    System.out.println("Aika kulunui HashMapin kanssa = " + System.currentTimeMillis());
+
+                    //Lisää TreeMapiin
+                    treeMap.put(lastItem, people.getAll());
+                    System.out.println("Aika kulunui TreeMapin kanssa = " + System.currentTimeMillis());
+
+
+                    //Lisää linkedHashMapiin
+                    linkedHashMap.put(lastItem, people.getAll());
+                    System.out.println("Aika kulunui LinkedHashMapin kanssa = " + System.currentTimeMillis());
+
+                    // Joka on pienempi
 
                     System.out.println("Hyvä, kiitos paljon kaikkista =) ");
                 } else if (num == 2) {
                     if(hashMap.size() == 0) {
-                        System.out.println("HashMap on tyhjä");
+                        System.out.println("HashMap ja muut myös ovat tyhjä");
                     } else {
                         for (int i = 0; i < hashMap.size(); i++) {
                             System.out.println(hashMap.get(i));
@@ -57,7 +74,10 @@ public class Main {
             }
 
 
+
+
         }
+
 
 
     }
