@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Kata {
@@ -27,11 +26,20 @@ public class Kata {
         this.b = b;
     }
 
-    public int[] findDifference() {
-        List<Integer> newA = new ArrayList<Integer>();
-        List<Integer> newB = new ArrayList<Integer>();
+    public ArrayList<Integer> findDifference() {
+        ArrayList<Integer> newA = new ArrayList<Integer>();
+        ArrayList<Integer> newB = new ArrayList<Integer>();
 
-        newA = clone(this.a);
+        for (int i = 0; i < this.a.length; i++) {
+            newA.add(this.a[i]);
+        }
+        for (int i = 0; i < this.b.length; i++) {
+            newB.add(this.b[i]);
+        }
+
+        newA.removeAll(newB);
+
+        return newA;
 
     }
 

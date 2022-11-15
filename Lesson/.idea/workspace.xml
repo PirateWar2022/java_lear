@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="308093ab-3211-4c35-b276-d1647f768ad2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Homework3/src/Colors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Homework3/src/alogr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework5/src/AddToMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework5/src/people.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../codewars/src/DisemvowelTrolls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../codewars/src/Kata.java" beforeDir="false" afterPath="$PROJECT_DIR$/../codewars/src/Kata.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../codewars/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../codewars/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,13 +28,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/arsenii/Documents/java/Lesson"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/arsenii/Documents/java/Lesson&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
